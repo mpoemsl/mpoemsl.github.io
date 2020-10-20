@@ -6,7 +6,7 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "en-DE"
 title                    : "Martin Pömsl"
 title_separator          : "-"
 name                     : &name "Martin Pömsl"
@@ -25,7 +25,7 @@ comments:
   disqus:
     shortname            :
   discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+    server               :
   facebook:
     appid                :
     num_posts            : # 5 (default)
@@ -69,14 +69,6 @@ social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
-
-
-# Analytics
-analytics:
-  provider               :  false # false (default), "google", "google-universal", "custom"
-  google:
-    tracking_id          :
-
 
 # Site Author
 author:
@@ -123,6 +115,7 @@ include:
   - _pages
   - files
 exclude:
+  - _pages/404.md
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -175,18 +168,6 @@ kramdown:
 
 # Collections
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
 
 
 # Defaults
@@ -198,10 +179,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
-      comments: true
-      share: false
-      related: true
   # _pages
   - scope:
       path: ""
@@ -216,8 +193,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-      share: false
-      comments: true
 
 # Sass/SCSS
 sass:
@@ -229,7 +204,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Europe/Amsterdam # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
@@ -258,12 +233,7 @@ whitelist:
 #  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
 #  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path/my-awesome-category/index.html ~> path: /
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
+
 # https://github.com/jekyll/jekyll-archives
 # jekyll-archives:
 #   enabled:
