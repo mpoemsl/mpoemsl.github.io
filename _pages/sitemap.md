@@ -7,7 +7,7 @@ author_profile: true
 
 {% include base_path %}
 
-A list of all pages on this sites. For robots, there is an [XML version]({{ base_path }}/sitemap.xml) available as well.
+A list of all pages on this site. For robots, there is an [XML version]({{ base_path }}/sitemap.xml) available as well.
 
 <h2>Pages</h2>
 {% for post in site.pages %}
