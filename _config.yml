@@ -10,7 +10,7 @@ locale                   : "en-DE"
 title                    : "Martin Pömsl"
 title_separator          : "-"
 name                     : &name "Martin Pömsl"
-description              : &description "Undergraduate student doing research in ML & NLU"
+description              : &description "MSc Student at McGill University"
 url                      : https://mpoemsl.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : 
 repository               : "mpoemsl/mpoemsl.github.io"

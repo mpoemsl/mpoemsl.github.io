@@ -8,12 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I'm Martin.  
-
-I would like to teach computers how to use language the same way we do. To that end, I have worked on natural language generation, lexical semantic change detection and coreference resolution. I am especially excited about approaching NLP tasks using novel neural methods such as [weight-agnostic neural networks](https://arxiv.org/abs/1906.04358), [binarized neural networks](https://arxiv.org/abs/1602.02830) or [memory-augmented neural networks](https://arxiv.org/abs/1410.3916).  
-
-If you are looking for a collaborator or just want to talk about an idea, feel free to contact me!
-
+I am a graduate student at McGill University, where I learn about computer science and do research under the supervision of [Jackie C. K. Cheung](https://www.cs.mcgill.ca/~jcheung/) on [natural language understanding](https://en.wikipedia.org/wiki/Natural-language_understanding). Ultimatively, I would like to teach computers how to use language the same way we do, but that's a long way off. In the meantime, I work on incremental language tasks such as [natural language generation](https://en.wikipedia.org/wiki/Natural-language_generation), [lexical semantic change detection](https://en.wikipedia.org/wiki/Semantic_change) and [coreference resolution](https://en.wikipedia.org/wiki/Coreference). If you have any interesting ideas regarding these tasks, feel free to contact me!
 &nbsp;
 
 ### Publications  
