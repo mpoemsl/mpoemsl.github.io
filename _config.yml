@@ -6,7 +6,7 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-locale                   : "en-DE"
+locale                   : "en-CA"
 title                    : "Martin Pömsl"
 title_separator          : "-"
 name                     : &name "Martin Pömsl"
@@ -74,8 +74,8 @@ social:
 author:
   name             : "Martin Pömsl"
   avatar           : "profile.jpg"
-  bio              : "Undergraduate student doing research in ML & NLU"
-  location         : "Germany"
+  bio              : "MSc Student at McGill University"
+  location         : "Montreal, Canada"
   employer         :
   pubmed           : 
   googlescholar    : 
