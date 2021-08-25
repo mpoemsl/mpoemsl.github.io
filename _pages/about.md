@@ -10,7 +10,7 @@ redirect_from:
 
 I am a graduate student at McGill University, where I learn about computer science and do research under the supervision of [Jackie C. K. Cheung](https://www.cs.mcgill.ca/~jcheung/) on natural language understanding.
 
-Ultimatively, I would like to teach computers how to use language the same way we do, but that's a long way off. In the meantime, I work on incremental language tasks such as [natural language generation](https://en.wikipedia.org/wiki/Natural-language_generation), [lexical semantic change detection](https://en.wikipedia.org/wiki/Semantic_change) and [coreference resolution](https://en.wikipedia.org/wiki/Coreference). If you have any interesting ideas regarding these tasks, feel free to contact me!
+Ultimatively, I would like to teach computers how to use language the same way we do, but that's a long way off. In the meantime, I work on language tasks such as [natural language generation](https://en.wikipedia.org/wiki/Natural-language_generation), [lexical semantic change detection](https://en.wikipedia.org/wiki/Semantic_change) and [coreference resolution](https://en.wikipedia.org/wiki/Coreference). If you have any interesting ideas regarding these tasks, feel free to contact me!
 &nbsp;
 
 ### Publications  
