@@ -19,4 +19,4 @@ Pömsl, Martin and Roman Lyapin (2020). [CIRCE at SemEval-2020 Task 1: Ensemblin
 
 ### Theses
 
-Pömsl, Martin (2021). <a href="mpoemsl.github.io/documents/bachelor_thesis_mpoemsl.pdf" target="_blank">Extending Neural Temporal Tagging Systems with External Knowledge</a>. *Bachelor Thesis*. Osnabrück University.
+Pömsl, Martin (2021). <a href="mpoemsl.github.io/documents/bachelor_thesis_mpoemsl.pdf" target="_blank" download>Extending Neural Temporal Tagging Systems with External Knowledge</a>. *Bachelor Thesis*. Osnabrück University.
