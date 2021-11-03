@@ -6,4 +6,4 @@ author_profile: true
 
 ---
 
-You can reach me at [mpoemsl@uos.de](mailto:mpoemsl@uos.de).
+You can reach me at [martin.pomsl@mila.quebec](mailto:martin.pomsl@mila.quebec).
