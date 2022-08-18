@@ -15,7 +15,7 @@ Ultimately, I would like to teach computers how to use language the same way we 
 
 ### Publications
 
-Pömsl, Martin and Roman Lyapin (2020). [CIRCE at SemEval-2020 Task 1: Ensembling Context-Free and Context-Dependent Word Representations](https://www.aclweb.org/anthology/2020.semeval-1.21/). In *Proceedings of the Fourteenth Workshop on Semantic Evaluation*. Barcelona (online): International Committee for Computational Linguistics, pp. 180–186. [Code](https://github.com/mpoemsl/circe).
+Martin Pömsl and Roman Lyapin (2020). [CIRCE at SemEval-2020 Task 1: Ensembling Context-Free and Context-Dependent Word Representations](https://www.aclweb.org/anthology/2020.semeval-1.21/). In *Proceedings of the Fourteenth Workshop on Semantic Evaluation*. Barcelona (online): International Committee for Computational Linguistics, pp. 180–186. [Code](https://github.com/mpoemsl/circe).
 
 ### Theses
 
