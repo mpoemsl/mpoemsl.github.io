@@ -21,4 +21,4 @@ Akshatha Arodi\*, **Martin Pömsl\***, Kaheer Suleman, Adam Trischler, Alexandra
 
 ### Theses
 
-**Pömsl, Martin** (2021). Extending Neural Temporal Tagging Systems with External Knowledge. *Bachelor Thesis*. Osnabrück University.
+**Martin Pömsl** (2021). Extending Neural Temporal Tagging Systems with External Knowledge. *Bachelor Thesis*. Osnabrück University.
