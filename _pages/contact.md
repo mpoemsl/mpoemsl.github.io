@@ -6,4 +6,4 @@ author_profile: true
 
 ---
 
-You can reach me at [martin.pomsl@mila.quebec](mailto:martin.pomsl@mila.quebec).
+You can reach me at [martin.pomsl@mail.mcgill.ca](mailto:martin.pomsl@mail.mcgill.ca).
