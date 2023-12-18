@@ -10,7 +10,7 @@ locale                   : "en-CA"
 title                    : "Martin Pömsl"
 title_separator          : "-"
 name                     : &name "Martin Pömsl"
-description              : &description "MSc Student at McGill University"
+description              : &description "Machine Learning Engineer"
 url                      : https://mpoemsl.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : 
 repository               : "mpoemsl/mpoemsl.github.io"
@@ -74,8 +74,8 @@ social:
 author:
   name             : "Martin Pömsl"
   avatar           : "profile.jpg"
-  bio              : "MSc Student at McGill University"
-  location         : "Montreal"
+  bio              : "Machine Learning Engineer"
+  location         : "Zürich"
   employer         :
   pubmed           : 
   googlescholar    : 
