@@ -10,7 +10,7 @@ redirect_from:
 
 Starting February 2024, I will be working as a Machine Learning Engineer at the machine translation startup [Textshuttle](https://textshuttle.com/en/) in Zürich, Switzerland.
 
-I used to be a graduate student at [McGill University](https://www.mcgill.ca/) and [Mila Quebec AI Institute](https://mila.quebec/en/) in Montreal. During that time, I did research under the supervision of [Jackie C. K. Cheung](https://www.cs.mcgill.ca/~jcheung/) in collaboration with [Microsoft Research](https://www.microsoft.com/en-us/research/) on [natural language understanding](https://en.wikipedia.org/wiki/Natural-language_understanding) issues such as knowledge representation and common sense reasoning. 
+I used to be a graduate student at [McGill University](https://www.mcgill.ca/) and [Mila Quebec AI Institute](https://mila.quebec/en/) in Montreal. During that time, I did research under the supervision of [Jackie C. K. Cheung](https://www.cs.mcgill.ca/~jcheung/) in collaboration with [Microsoft Research](https://www.microsoft.com/en-us/research/) on [natural language understanding](https://en.wikipedia.org/wiki/Natural-language_understanding) issues such as knowledge representations and common sense reasoning.
 
 Before that, I studied [Cognitive Science](https://en.wikipedia.org/wiki/Cognitive_science) at [Osnabrück University](https://www.uni-osnabrueck.de/).
 &nbsp;
