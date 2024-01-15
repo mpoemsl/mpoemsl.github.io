@@ -9,7 +9,7 @@ body.accessible #main-content>div, body.accessible body, body.accessible html, b
 }
 
 body {
-    background: #33CCCC; /* Fallback */
+    background-color: #006400;
     /*background-image: url(bg.jpg);
     background-size: cover;
     background-attachment: fixed;*/
