@@ -19,9 +19,16 @@ body {
     background-image: url(bg.jpg);
     background-size: cover;
     background-attachment: fixed;
-    /*animation: changeBg 5s infinite;*/
+    animation: changeBg 5s infinite;
 }
 
 .Card:has(.about-container) {
     visibility: hidden;
+}
+
+.PlayerIcon-128 {
+    background: url(fakeicon.jpg);
+    background-size: auto;
+    width: 0px;
+    height: 0px;
 }
