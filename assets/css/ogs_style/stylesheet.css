@@ -3,11 +3,11 @@
     25% {background-image: url(bg_frames/1.jpg);}
     50% {background-image: url(bg_frames/2.jpg);}
     75% {background-image: url(bg_frames/3.jpg);}
-    100% {background-image: url(bg_frames/3.jpg);}
+    100% {background-image: url(bg_frames/4.jpg);}
 }
 
 @keyframes fade-out {
-    0% {opacity: 1.09;}
+    0% {opacity: 1.00;}
     25% {opacity: 0.75;}
     50% {opacity: 0.50;}
     75% {opacity: 0.25;}
@@ -25,13 +25,13 @@ body.accessible #main-content>div, body.accessible body, body.accessible html, b
 }
 
 body {
-    background-image: url(bg.jpg);
+    background-image: url(bg_frames/0.jpg);
     background-size: cover;
     background-attachment: fixed;
-    animation: change-bg 7s infinite;
+    animation: change-bg 25s infinite;
 }
 
 .PlayerIcon-128 {
     opacity: 0;
-    animation: fade-out 7s 1;
+    animation: fade-out 5s 1;
 }
