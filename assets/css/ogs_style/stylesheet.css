@@ -1,0 +1,9 @@
+body {
+    background-image: url(bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.Card:has(.about-container) {
+    visibility: hidden;
+}
