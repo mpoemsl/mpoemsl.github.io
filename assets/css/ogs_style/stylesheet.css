@@ -1,3 +1,19 @@
+@keyframes changeBg{
+   0% {background-image: url(bg_frames/0.jpg);}
+   25% {background-image: url(bg_frames/1.jpg);}
+   50% {background-image: url(bg_frames/2.jpg);}
+   75% {background-image: url(bg_frames/3.jpg);}
+   100% {background-image: url(bg_frames/3.jpg);}
+}
+
+@keyframes changeIcon{
+   0%  {background: url(icon_frames/0.jpg);}
+   25% {background: url(icon_frames/1.jpg);}
+   50% {background: url(icon_frames/2.jpg);}
+   75% {background: url(icon_frames/3.jpg);}
+   100% {background: url(icon_frames/4.jpg);}
+}
+
 body.accessible #main-content, body.dark #main-content, body.light #main-content {
     background-color: rgba(0, 0, 0, 0) !important;
     color: rgba(220, 220, 220, 1) !important;
@@ -8,27 +24,18 @@ body.accessible #main-content>div, body.accessible body, body.accessible html, b
     color: rgba(220, 220, 220, 1) !important;
 }
 
-@keyframes changeBg{
-   0%,100%  {background-image: url(bg_1.jpg);}
-   25% {background-image: url(bg_2.jpg);}
-   50% {background-image: url(bg_3.jpg);}
-   75% {background-image: url(bg_4.jpg);}
-}
-
 body {
     background-image: url(bg.jpg);
     background-size: cover;
     background-attachment: fixed;
-    animation: changeBg 5s infinite;
-}
-
-.Card:has(.about-container) {
-    visibility: hidden;
+    animation: changeBg 7s infinite;
 }
 
 .PlayerIcon-128 {
     background: url(fakeicon.jpg) !important;
-    background-size: auto !important;
     width: 0px !important;
     height: 0px !important;
+    background-size:  128px;
+    padding: 64px;
+    animation: changeIcon 7s infinite;
 }
