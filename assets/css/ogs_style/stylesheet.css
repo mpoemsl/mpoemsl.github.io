@@ -122,7 +122,7 @@ body {
     background-image: url(bg_frames/0.jpg);
     background-size: cover;
     background-attachment: fixed;
-    animation: change-bg 101s infinite;
+    animation: change-bg 202s infinite;
 }
 
 .PlayerIcon-128 {
