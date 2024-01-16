@@ -5,6 +5,9 @@ import numpy as np
 
 EPOCHS = 100
 
+Y_POS = 24
+X_POS = 48
+
 # 2160 x 3840 px corresponds to 108 x 192 square of size 20 x 20
 # ogs bg color is (26, 26, 26)
 # ogs text color is (220, 220, 220)
@@ -14,7 +17,7 @@ def main():
 
     gol = np.zeros((108, 192)).astype(bool)
 
-    gol[24 : 27, 95 : 98] = [
+    gol[Y_POS:Y_POS+3, X_POS:X_POS+3] = [
         [False, True, True],
         [True, True, False],
         [False, True, False],
