@@ -5,8 +5,8 @@ import numpy as np
 
 EPOCHS = 100
 
-Y_POS = 24
-X_POS = 48
+Y_POS = 22
+X_POS = 46
 
 # 2160 x 3840 px corresponds to 108 x 192 square of size 20 x 20
 # ogs bg color is (26, 26, 26)
