@@ -126,6 +126,11 @@ body {
     animation-fill-mode: forwards;
 }
 
+body::after {
+   position:absolute; width:0; height:0; overflow:hidden; z-index:-1; // hide images
+   content:url(bg_frames/0.jpg) url(bg_frames/1.jpg) url(bg_frames/2.jpg) url(bg_frames/3.jpg) url(bg_frames/4.jpg);   // load images
+}
+
 .PlayerIcon-128 {
     opacity: 0;
     animation: fade-out 5s 1;
