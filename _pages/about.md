@@ -12,7 +12,7 @@ I'm a machine learning engineer with a background in NLP research. I currently w
 
 I used to be a computer science graduate student at [McGill University](https://www.mcgill.ca/) and [Mila Quebec AI Institute](https://mila.quebec/en/) in Montreal. During that time, I did research under the supervision of [Jackie C. K. Cheung](https://www.cs.mcgill.ca/~jcheung/) in collaboration with [Microsoft Research](https://www.microsoft.com/en-us/research/) on [natural language understanding](https://en.wikipedia.org/wiki/Natural-language_understanding) issues such as knowledge representation and common sense reasoning.
 
-Before that, I studied [cognitive science](https://en.wikipedia.org/wiki/Cognitive_science) at [Osnabrück University](https://www.uni-osnabrueck.de/).
+Before that, I studied [cognitive science](https://en.wikipedia.org/wiki/Cognitive_science) at [Osnabrück University](https://www.uni-osnabrueck.de/). In my leisure I enjoy playing [Go](https://en.wikipedia.org/wiki/Go_(game)), reading novels, and spending time in nature.
 &nbsp;
 
 ### Publications
