@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I'm a machine learning engineer with a background in NLP research. I currently work on serving LLMs and NMT models at the translation company [Supertext](https://supertext.com/) in Zurich, Switzlerand. This company is the result of a merger with the machine translation startup [Textshuttle](https://textshuttle.com/) which I joined in Feb 2024.
+I'm a machine learning engineer with a background in NLP research. I currently work on serving LLMs and NMT models at the translation company [Supertext](https://supertext.com/) in Zurich, Switzerland. This company is the result of a merger with the machine translation startup [Textshuttle](https://textshuttle.com/) which I joined in Feb 2024.
 
 I used to be a computer science graduate student at [McGill University](https://www.mcgill.ca/) and [Mila Quebec AI Institute](https://mila.quebec/en/) in Montreal. During that time, I did research under the supervision of [Jackie C. K. Cheung](https://www.cs.mcgill.ca/~jcheung/) in collaboration with [Microsoft Research](https://www.microsoft.com/en-us/research/) on [natural language understanding](https://en.wikipedia.org/wiki/Natural-language_understanding) issues such as knowledge representation and common sense reasoning.
 
