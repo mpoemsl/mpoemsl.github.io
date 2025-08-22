@@ -17,9 +17,11 @@ Before that, I studied [cognitive science](https://en.wikipedia.org/wiki/Cogniti
 
 ### Publications
 
-Akshatha Arodi\*, **Martin Pömsl\***, Kaheer Suleman, Adam Trischler, Alexandra Olteanu, and Jackie Chi Kit Cheung (2023). [The KITMUS Test: Evaluating Knowledge Integration from Multiple Sources](https://aclanthology.org/2023.acl-long.841/). *Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)*. Toronto, Canada: Association for Computational Linguistics. **Nominated for a Best Paper Award.** \*Equal contribution. [Code](https://github.com/mpoemsl/kitmus).
+Alex Flückiger, Chantal Amrhein, Tim Graf, Frédéric Odermatt, **Martin Pömsl**, Philippe Schläpfer, Florian Schottmann, Samuel Läubli (2025). [A comparison of translation performance between DeepL and Supertext](https://aclanthology.org/2025.mtsummit-2.6/). *Proceedings of Machine Translation Summit XX: Volume 2*. Geneva, Switzerland: European Association for Machine Translation. [Data & Code](https://github.com/supertext/evaluation_deepl_supertext).
 
-**Martin Pömsl** and Roman Lyapin (2020). [CIRCE at SemEval-2020 Task 1: Ensembling Context-Free and Context-Dependent Word Representations](https://www.aclweb.org/anthology/2020.semeval-1.21/). In *Proceedings of the Fourteenth Workshop on Semantic Evaluation*. Barcelona (online): International Committee for Computational Linguistics, pp. 180–186. [Code](https://github.com/mpoemsl/circe).
+Akshatha Arodi\*, **Martin Pömsl\***, Kaheer Suleman, Adam Trischler, Alexandra Olteanu, and Jackie Chi Kit Cheung (2023). [The KITMUS Test: Evaluating Knowledge Integration from Multiple Sources](https://aclanthology.org/2023.acl-long.841/). *Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)*. Toronto, Canada: Association for Computational Linguistics. **Nominated for a Best Paper Award.** \*Equal contribution. [Data & Code](https://github.com/mpoemsl/kitmus).
+
+**Martin Pömsl** and Roman Lyapin (2020). [CIRCE at SemEval-2020 Task 1: Ensembling Context-Free and Context-Dependent Word Representations](https://www.aclweb.org/anthology/2020.semeval-1.21/). In *Proceedings of the Fourteenth Workshop on Semantic Evaluation*. Barcelona (online): International Committee for Computational Linguistics, pp. 180–186. [Data & Code](https://github.com/mpoemsl/circe).
 
 ### Theses
 
