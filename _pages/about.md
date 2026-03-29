@@ -8,13 +8,13 @@ redirect_from:
   - /about.html
 ---
 
-I'm a machine learning engineer with a background in NLP research, currently doing MLOps at [Migros Bank](https://www.migrosbank.ch/) in Zurich, Switzerland.
+I am an experienced machine learning engineer with a background in NLP research. I'm currently building on-prem AI tools at [Migros Bank](https://www.migrosbank.ch/) in Zurich, Switzerland.
 
-Before that I worked on serving LLMs and NMT models at the translation company [Supertext](https://supertext.com/). This company was the result of a merger with the machine translation startup [Textshuttle](https://textshuttle.com/) which I joined in Feb 2024.
+Before that, I worked on serving LLMs and NMT models at the language service provider [Supertext](https://supertext.com/). This company was the result of a merger with the machine translation startup [Textshuttle](https://textshuttle.com/), which I had joined in early 2024 before the merger.
 
-I used to be a computer science graduate student at [McGill University](https://www.mcgill.ca/) and [Mila Quebec AI Institute](https://mila.quebec/en/) in Montreal. During that time, I did research under the supervision of [Jackie C. K. Cheung](https://www.cs.mcgill.ca/~jcheung/) in collaboration with [Microsoft Research](https://www.microsoft.com/en-us/research/) on [natural language understanding](https://en.wikipedia.org/wiki/Natural-language_understanding) issues such as knowledge representation and common sense reasoning.
+I did my graduate studies in computer science at [McGill University](https://www.mcgill.ca/) and the [Mila Quebec AI Institute](https://mila.quebec/en/) in Montreal. During that time, I did research under the supervision of [Jackie C. K. Cheung](https://www.cs.mcgill.ca/~jcheung/) in collaboration with [Microsoft Research](https://www.microsoft.com/en-us/research/) on [natural language understanding](https://en.wikipedia.org/wiki/Natural-language_understanding) issues such as knowledge representation and common-sense reasoning.
 
-Before that, I studied [cognitive science](https://en.wikipedia.org/wiki/Cognitive_science) at [Osnabrück University](https://www.uni-osnabrueck.de/). In my leisure I enjoy playing [Go](https://en.wikipedia.org/wiki/Go_(game)), reading novels, and spending time in nature.
+In my undergrad, I studied [cognitive science](https://en.wikipedia.org/wiki/Cognitive_science) at [Osnabrück University](https://www.uni-osnabrueck.de/) in Germany and [Chuo University](https://www.chuo-u.ac.jp/) in Japan. In my leisure I enjoy playing [Go](https://en.wikipedia.org/wiki/Go_(game)), reading novels, and spending time in nature.
 &nbsp;
 
 ### Publications
