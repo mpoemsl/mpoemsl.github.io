@@ -10,7 +10,7 @@ redirect_from:
 
 I am an experienced machine learning engineer with a background in NLP research. I'm currently building on-prem AI tools at [Migros Bank](https://www.migrosbank.ch/) in Zurich, Switzerland.
 
-Before that, I worked on serving LLMs and NMT models at the language service provider [Supertext](https://supertext.com/). This company was the result of a merger with the machine translation startup [Textshuttle](https://textshuttle.com/), which I had joined in early 2024 before the merger.
+Before that, I worked on serving LLMs and NMT models at the language service provider [Supertext](https://supertext.com/), which emerged from a merger with the machine translation startup [Textshuttle](https://textshuttle.com/) that I had joined in early 2024.
 
 I did my graduate studies in computer science at [McGill University](https://www.mcgill.ca/) and the [Mila Quebec AI Institute](https://mila.quebec/en/) in Montreal. During that time, I did research under the supervision of [Jackie C. K. Cheung](https://www.cs.mcgill.ca/~jcheung/) in collaboration with [Microsoft Research](https://www.microsoft.com/en-us/research/) on [natural language understanding](https://en.wikipedia.org/wiki/Natural-language_understanding) issues such as knowledge representation and common-sense reasoning.
 
