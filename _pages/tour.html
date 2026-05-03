@@ -1,0 +1,87 @@
+---
+layout: archive
+permalink: /tour/
+title: "Tour"
+author_profile: true
+---
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+
+<p><a href="/tours/">&larr; Back to Tours</a></p>
+
+<h2 id="tour-name"></h2>
+
+<div id="map" style="height: 500px; width: 100%; border-radius: 4px; margin: 1em 0;"></div>
+
+<div id="tour-stats"></div>
+
+<style>
+.stats-table {
+  border-collapse: collapse;
+  font-size: 0.9em;
+  margin-top: 0.5em;
+}
+.stats-table th, .stats-table td {
+  padding: 0.4em 0.9em;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+.stats-table th {
+  font-weight: bold;
+  white-space: nowrap;
+  padding-right: 2em;
+}
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/2.2.0/gpx.min.js"></script>
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var gpxPath = params.get('gpx');
+
+  if (!gpxPath) {
+    document.getElementById('tour-name').textContent = 'Tour not found';
+    return;
+  }
+
+  var map = L.map('map');
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 19
+  }).addTo(map);
+
+  new L.GPX(gpxPath, {
+    async: true,
+    polyline_options: { color: '#e74c3c', weight: 3, opacity: 0.9 },
+    marker_options: {
+      startIconUrl: null,
+      endIconUrl: null,
+      shadowUrl: null
+    }
+  }).on('loaded', function (e) {
+    var layer = e.target;
+    map.fitBounds(layer.getBounds());
+
+    var rawName = layer.get_name() || '';
+    var name = rawName.replace(/_/g, ' ');
+    document.getElementById('tour-name').textContent = name;
+    if (name) document.title = name + ' — Tours';
+
+    var distKm = (layer.get_distance() / 1000).toFixed(1);
+    var gain   = Math.round(layer.get_elevation_gain());
+    var loss   = Math.round(layer.get_elevation_loss());
+    var maxEl  = Math.round(layer.get_elevation_max());
+
+    document.getElementById('tour-stats').innerHTML =
+      '<table class="stats-table">' +
+        '<tr><th>Distance</th><td>' + distKm + ' km</td></tr>' +
+        '<tr><th>Altitude Gain</th><td>' + gain + ' m</td></tr>' +
+        '<tr><th>Altitude Loss</th><td>' + loss + ' m</td></tr>' +
+        '<tr><th>Highest Elevation</th><td>' + maxEl + ' m</td></tr>' +
+      '</table>';
+  }).on('error', function () {
+    document.getElementById('tour-name').textContent = 'Error loading tour';
+  }).addTo(map);
+})();
+</script>
