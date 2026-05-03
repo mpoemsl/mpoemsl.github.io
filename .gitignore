@@ -1,2 +1,4 @@
 _site/
-
+.claude/
+__pycache__/
+.mypy_cache/
