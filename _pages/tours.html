@@ -1,0 +1,190 @@
+---
+layout: archive
+permalink: /tours/
+title: "Tours"
+author_profile: true
+---
+
+<div id="tours-table-container">
+  <p>Loading tour data...</p>
+</div>
+
+<style>
+.tours-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+}
+.tours-table th, .tours-table td {
+  padding: 0.5em 0.8em;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  white-space: nowrap;
+}
+.tours-table th {
+  font-weight: bold;
+  border-bottom: 2px solid #aaa;
+  cursor: pointer;
+  user-select: none;
+}
+.tours-table th:hover {
+  background: #eee;
+}
+.tours-table tr:hover td {
+  background: #f5f5f5;
+}
+</style>
+
+<script>
+(function () {
+  var GPX_FILES = [
+    { path: '/assets/gpx/hiking_tours/adliswil_felsenegg.gpx', type: 'Hiking' },
+    { path: '/assets/gpx/hiking_tours/baden_laegern_dielsdorf.gpx', type: 'Hiking' },
+    { path: '/assets/gpx/hiking_tours/ben_nevis.gpx', type: 'Hiking' },
+    { path: '/assets/gpx/hiking_tours/huenenberg_chriesiwanderung.gpx', type: 'Hiking' },
+    { path: '/assets/gpx/hiking_tours/meilen_pfannenstiel.gpx', type: 'Hiking' },
+    { path: '/assets/gpx/hiking_tours/regensberg_laegern_baden.gpx', type: 'Hiking' },
+    { path: '/assets/gpx/hiking_tours/reichenbach_falls.gpx', type: 'Hiking' },
+    { path: '/assets/gpx/hiking_tours/schindellegi_etzel_st_meinrad_luegeten.gpx', type: 'Hiking' },
+    { path: '/assets/gpx/hiking_tours/schwyz_grosser_mythen.gpx', type: 'Hiking' },
+    { path: '/assets/gpx/hiking_tours/triemli_uetliberg.gpx', type: 'Hiking' },
+    { path: '/assets/gpx/hiking_tours/unteralpli_gnipen_wildspitz.gpx', type: 'Hiking' },
+    { path: '/assets/gpx/hiking_tours/zug_zugerberg.gpx', type: 'Hiking' },
+    { path: '/assets/gpx/snowshoe_tours/biberegg_guegi.gpx', type: 'Snowshoe' },
+    { path: '/assets/gpx/snowshoe_tours/euthal_wisstannenweid.gpx', type: 'Snowshoe' },
+    { path: '/assets/gpx/snowshoe_tours/sulwald_lobhorn.gpx', type: 'Snowshoe' }
+  ];
+
+  var NS = 'http://www.topografix.com/GPX/1/1';
+
+  function haversine(lat1, lon1, lat2, lon2) {
+    var R = 6371000;
+    var toRad = function (d) { return d * Math.PI / 180; };
+    var dLat = toRad(lat2 - lat1);
+    var dLon = toRad(lon2 - lon1);
+    var a = Math.sin(dLat / 2) * Math.sin(dLat / 2)
+          + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2))
+          * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    return R * 2 * Math.asin(Math.sqrt(a));
+  }
+
+  function elems(doc, tag) {
+    var r = doc.getElementsByTagNameNS(NS, tag);
+    if (r.length === 0) r = doc.getElementsByTagNameNS('*', tag);
+    return r;
+  }
+
+  function parseGpx(xmlText, filePath, type) {
+    var parser = new DOMParser();
+    var doc = parser.parseFromString(xmlText, 'application/xml');
+
+    var nameEl = elems(doc, 'name')[0];
+    var name = nameEl
+      ? nameEl.textContent.trim().replace(/_/g, ' ')
+      : filePath.split('/').pop().replace('.gpx', '').replace(/_/g, ' ');
+
+    var trkpts = elems(doc, 'trkpt');
+    var distance = 0, elevGain = 0, elevLoss = 0;
+    var elevMin = Infinity, elevMax = -Infinity;
+    var prevLat = null, prevLon = null, prevEle = null;
+
+    for (var i = 0; i < trkpts.length; i++) {
+      var pt = trkpts[i];
+      var lat = parseFloat(pt.getAttribute('lat'));
+      var lon = parseFloat(pt.getAttribute('lon'));
+      var eleEl = elems(pt, 'ele')[0];
+      var ele = eleEl ? parseFloat(eleEl.textContent) : null;
+
+      if (prevLat !== null) distance += haversine(prevLat, prevLon, lat, lon);
+
+      if (ele !== null) {
+        if (ele < elevMin) elevMin = ele;
+        if (ele > elevMax) elevMax = ele;
+        if (prevEle !== null) {
+          var diff = ele - prevEle;
+          if (diff > 0) elevGain += diff; else elevLoss -= diff;
+        }
+        prevEle = ele;
+      }
+
+      prevLat = lat;
+      prevLon = lon;
+    }
+
+    return {
+      name: name,
+      type: type,
+      distance: distance / 1000,
+      elevGain: Math.round(elevGain),
+      elevLoss: Math.round(elevLoss),
+      elevMin: elevMin === Infinity ? null : Math.round(elevMin),
+      elevMax: elevMax === -Infinity ? null : Math.round(elevMax)
+    };
+  }
+
+  var COLS = [
+    { key: 'name',     label: 'Name',          fmt: function (v) { return v; } },
+    { key: 'type',     label: 'Type',          fmt: function (v) { return v; } },
+    { key: 'distance', label: 'Distance (km)', fmt: function (v) { return v.toFixed(1); } },
+    { key: 'elevGain', label: 'Gain (m)',       fmt: function (v) { return v; } },
+    { key: 'elevLoss', label: 'Loss (m)',       fmt: function (v) { return v; } },
+    { key: 'elevMin',  label: 'Min elev. (m)', fmt: function (v) { return v !== null ? v : '—'; } },
+    { key: 'elevMax',  label: 'Max elev. (m)', fmt: function (v) { return v !== null ? v : '—'; } }
+  ];
+
+  var sortCol = 'name', sortAsc = true;
+
+  function renderTable(rows, tbody) {
+    var sorted = rows.slice().sort(function (a, b) {
+      var va = a[sortCol], vb = b[sortCol];
+      if (va === null) va = sortAsc ? Infinity : -Infinity;
+      if (vb === null) vb = sortAsc ? Infinity : -Infinity;
+      if (typeof va === 'string') return sortAsc ? va.localeCompare(vb) : vb.localeCompare(va);
+      return sortAsc ? va - vb : vb - va;
+    });
+    tbody.innerHTML = sorted.map(function (r) {
+      return '<tr>' + COLS.map(function (c) {
+        return '<td>' + c.fmt(r[c.key]) + '</td>';
+      }).join('') + '</tr>';
+    }).join('');
+  }
+
+  function buildTable(rows) {
+    var container = document.getElementById('tours-table-container');
+    var table = document.createElement('table');
+    table.className = 'tours-table';
+
+    var thead = document.createElement('thead');
+    var headerRow = document.createElement('tr');
+    COLS.forEach(function (col) {
+      var th = document.createElement('th');
+      th.textContent = col.label;
+      th.addEventListener('click', function () {
+        if (sortCol === col.key) { sortAsc = !sortAsc; } else { sortCol = col.key; sortAsc = true; }
+        renderTable(rows, tbody);
+      });
+      headerRow.appendChild(th);
+    });
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+
+    var tbody = document.createElement('tbody');
+    table.appendChild(tbody);
+    renderTable(rows, tbody);
+
+    container.innerHTML = '';
+    container.appendChild(table);
+  }
+
+  Promise.all(GPX_FILES.map(function (f) {
+    return fetch(f.path)
+      .then(function (r) { return r.text(); })
+      .then(function (text) { return parseGpx(text, f.path, f.type); });
+  })).then(function (rows) {
+    buildTable(rows);
+  }).catch(function (err) {
+    document.getElementById('tours-table-container').innerHTML = '<p>Error loading tour data.</p>';
+    console.error(err);
+  });
+})();
+</script>
