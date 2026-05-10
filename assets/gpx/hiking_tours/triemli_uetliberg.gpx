@@ -1,7 +1,7 @@
-<?xml version='1.0' encoding='utf-8'?>
-<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<?xml version="1.0"?>
+<gpx version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
 	<metadata>
-		<name>Triemli_Uetliberg</name>
+		<name>Triemli Uetliberg</name>
 	</metadata>
 	<trk type="hiking">
 		<trkseg>
@@ -1622,7 +1622,7 @@
 			<trkpt lat="47.3496092999" lon="8.4914030119">
 				<ele>869.9</ele>
 			</trkpt>
-		<trkpt lat="47.3496285636" lon="8.4913816371">
+			<trkpt lat="47.3496285636" lon="8.4913816371">
 				<ele>869.9</ele>
 			</trkpt>
 			<trkpt lat="47.3496695694" lon="8.4913562823">
@@ -3236,6 +3236,6 @@
 			<trkpt lat="47.3678841894" lon="8.4955862091">
 				<ele>447.2</ele>
 			</trkpt>
-			</trkseg>
+		</trkseg>
 	</trk>
 </gpx>

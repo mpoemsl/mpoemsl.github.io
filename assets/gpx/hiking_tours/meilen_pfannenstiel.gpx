@@ -1,7 +1,7 @@
-<?xml version='1.0' encoding='utf-8'?>
-<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<?xml version="1.0"?>
+<gpx version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
 	<metadata>
-		<name>Meilen_Pfannenstiel</name>
+		<name>Meilen Pfannenstiel</name>
 	</metadata>
 	<trk type="hiking">
 		<trkseg>
@@ -2261,7 +2261,7 @@
 			<trkpt lat="47.2941529276" lon="8.6693234126">
 				<ele>836.1</ele>
 			</trkpt>
-		<trkpt lat="47.2940509802" lon="8.6693529018">
+			<trkpt lat="47.2940509802" lon="8.6693529018">
 				<ele>836.7</ele>
 			</trkpt>
 			<trkpt lat="47.2939723532" lon="8.6693829155">
@@ -4514,6 +4514,6 @@
 			<trkpt lat="47.2697031440" lon="8.6446045700">
 				<ele>420.7</ele>
 			</trkpt>
-			</trkseg>
+		</trkseg>
 	</trk>
 </gpx>

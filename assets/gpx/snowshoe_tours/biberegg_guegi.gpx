@@ -1,7 +1,7 @@
-<?xml version='1.0' encoding='utf-8'?>
-<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<?xml version="1.0"?>
+<gpx version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
 	<metadata>
-		<name>Biberegg_Guegi</name>
+		<name>Biberegg Guegi</name>
 	</metadata>
 	<trk type="snowshoe">
 		<trkseg>
@@ -1133,7 +1133,7 @@
 			<trkpt lat="47.0930307495" lon="8.6905448740">
 				<ele>1257.7</ele>
 			</trkpt>
-		<trkpt lat="47.0930355031" lon="8.6905464628">
+			<trkpt lat="47.0930355031" lon="8.6905464628">
 				<ele>1257.7</ele>
 			</trkpt>
 			<trkpt lat="47.0930841717" lon="8.6905580597">
@@ -2258,6 +2258,6 @@
 			<trkpt lat="47.1052895095" lon="8.6760129996">
 				<ele>927.0</ele>
 			</trkpt>
-			</trkseg>
+		</trkseg>
 	</trk>
 </gpx>

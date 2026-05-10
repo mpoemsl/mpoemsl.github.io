@@ -1,7 +1,7 @@
-<?xml version='1.0' encoding='utf-8'?>
-<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<?xml version="1.0"?>
+<gpx version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
 	<metadata>
-		<name>Adliswil_Felsenegg</name>
+		<name>Adliswil Felsenegg</name>
 	</metadata>
 	<trk type="hiking">
 		<trkseg>
@@ -884,7 +884,7 @@
 			<trkpt lat="47.3114077916" lon="8.5048201333">
 				<ele>794.5</ele>
 			</trkpt>
-		<trkpt lat="47.3113708372" lon="8.5048315810">
+			<trkpt lat="47.3113708372" lon="8.5048315810">
 				<ele>794.1</ele>
 			</trkpt>
 			<trkpt lat="47.3114386216" lon="8.5048105828">
@@ -1760,6 +1760,6 @@
 			<trkpt lat="47.3124300461" lon="8.5240770334">
 				<ele>452.0</ele>
 			</trkpt>
-			</trkseg>
+		</trkseg>
 	</trk>
 </gpx>

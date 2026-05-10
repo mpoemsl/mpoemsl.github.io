@@ -56,7 +56,8 @@ def sanitize(path: Path, tour_type: str, meta_name: str) -> str:
     if meta_name:
         metadata = ET.SubElement(gpx, "metadata")
         name_el = ET.SubElement(metadata, "name")
-        name_el.text = meta_name
+        plain_name = " ".join([word.capitalize() for word in meta_name.split("_")])
+        name_el.text = plain_name
 
     # Process tracks — strip <time>, <extensions>, waypoints; add type attr
     for trk in root.findall(f"{{{GPX_NS}}}trk"):
