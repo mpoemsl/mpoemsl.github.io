@@ -117,10 +117,7 @@ author_profile: true
   }
 
   function buildTable(rows) {
-    rows.sort(function (a, b) {
-      if (a.type !== b.type) return a.type.localeCompare(b.type);
-      return a.name.localeCompare(b.name);
-    });
+    rows.sort(function (a, b) { return b.elevGain - a.elevGain; });
 
     var html = '<table class="tours-table"><thead><tr>' +
       '<th>Name</th><th>Type</th><th>Distance (km)</th>' +
