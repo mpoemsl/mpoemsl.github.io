@@ -30,6 +30,12 @@ author_profile: true
 .tours-table th {
   font-weight: bold;
   border-bottom: 2px solid #aaa;
+  white-space: normal;
+  max-width: 6em;
+}
+.tours-table th.col-name {
+  white-space: nowrap;
+  max-width: none;
 }
 .tours-table tr:hover td {
   background: #f5f5f5;
@@ -189,7 +195,8 @@ author_profile: true
   function buildTable(rows) {
     var html = '<div class="tours-table-scroll"><table class="tours-table"><thead><tr>';
     COLUMNS.forEach(function (col) {
-      html += '<th data-key="' + col.key + '">' + col.label + ' <span class="sort-arrow"></span></th>';
+      var cls = col.key === 'name' ? ' class="col-name"' : '';
+      html += '<th' + cls + ' data-key="' + col.key + '">' + col.label + ' <span class="sort-arrow"></span></th>';
     });
     html += '</tr></thead><tbody></tbody></table></div>';
     document.getElementById('tours-table-container').innerHTML = html;
