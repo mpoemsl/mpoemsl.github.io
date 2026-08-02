@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Sanitize Swisstopo GPX files: strip metadata, waypoints, timestamps, extensions.
-Adds a type attribute to <trk> based on parent folder name."""
+"""Sanitize Swisstopo GPX files: strip metadata, waypoints, timestamps,
+extensions. Adds a type attribute to <trk> based on parent folder name."""
 
 import re
 import sys
@@ -47,7 +47,8 @@ def sanitize(path: Path, tour_type: str, meta_name: str) -> str:
             "xmlns": GPX_NS,
             "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
             "xsi:schemaLocation": (
-                "http://www.topografix.com/GPX/1/1 " "http://www.topografix.com/GPX/1/1/gpx.xsd"
+                "http://www.topografix.com/GPX/1/1 "
+                "http://www.topografix.com/GPX/1/1/gpx.xsd"
             ),
         },
     )
@@ -56,7 +57,8 @@ def sanitize(path: Path, tour_type: str, meta_name: str) -> str:
     if meta_name:
         metadata = ET.SubElement(gpx, "metadata")
         name_el = ET.SubElement(metadata, "name")
-        plain_name = " ".join([word.capitalize() for word in meta_name.split("_")])
+        words = meta_name.split("_")
+        plain_name = " ".join(word.capitalize() for word in words)
         name_el.text = plain_name
 
     # Process tracks — strip <time>, <extensions>, waypoints; add type attr
@@ -96,7 +98,10 @@ def main():
         folder = path.parent.name
         tour_type = FOLDER_TO_TYPE.get(folder)
         if tour_type is None:
-            print(f"Skipping {path} (unknown folder '{folder}')", file=sys.stderr)
+            print(
+                f"Skipping {path} (unknown folder '{folder}')",
+                file=sys.stderr,
+            )
             continue
 
         stem = path.stem
@@ -108,7 +113,8 @@ def main():
 
         if new_path != path:
             path.rename(new_path)
-            print(f"Renamed & sanitized: {path.relative_to(gpx_root)} -> {new_name}")
+            rel_path = path.relative_to(gpx_root)
+            print(f"Renamed & sanitized: {rel_path} -> {new_name}")
         else:
             print(f"Sanitized: {path.relative_to(gpx_root)}")
 
