@@ -10,6 +10,12 @@ author_profile: true
 </div>
 
 <style>
+.tours-table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  padding-right: 1.5em;
+  box-sizing: border-box;
+}
 .tours-table {
   width: 100%;
   border-collapse: collapse;
@@ -181,11 +187,11 @@ author_profile: true
   }
 
   function buildTable(rows) {
-    var html = '<table class="tours-table"><thead><tr>';
+    var html = '<div class="tours-table-scroll"><table class="tours-table"><thead><tr>';
     COLUMNS.forEach(function (col) {
       html += '<th data-key="' + col.key + '">' + col.label + ' <span class="sort-arrow"></span></th>';
     });
-    html += '</tr></thead><tbody></tbody></table>';
+    html += '</tr></thead><tbody></tbody></table></div>';
     document.getElementById('tours-table-container').innerHTML = html;
 
     document.querySelectorAll('.tours-table th').forEach(function (th) {
