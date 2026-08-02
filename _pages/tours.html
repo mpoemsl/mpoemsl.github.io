@@ -28,6 +28,15 @@ author_profile: true
 .tours-table tr:hover td {
   background: #f5f5f5;
 }
+.tours-table th {
+  cursor: pointer;
+  user-select: none;
+}
+.tours-table th .sort-arrow {
+  display: inline-block;
+  width: 1em;
+  opacity: 0.5;
+}
 </style>
 
 <script>
@@ -120,15 +129,34 @@ author_profile: true
     };
   }
 
-  function buildTable(rows) {
-    rows.sort(function (a, b) { return b.elevGain - a.elevGain; });
+  var COLUMNS = [
+    { key: 'name', label: 'Name' },
+    { key: 'type', label: 'Type' },
+    { key: 'distance', label: 'Distance (km)' },
+    { key: 'elevGain', label: 'Altitude Gain (m)' },
+    { key: 'elevLoss', label: 'Altitude Loss (m)' },
+    { key: 'elevMax', label: 'Highest Elevation (m)' }
+  ];
 
-    var html = '<table class="tours-table"><thead><tr>' +
-      '<th>Name</th><th>Type</th><th>Distance (km)</th>' +
-      '<th>Altitude Gain (m)</th><th>Altitude Loss (m)</th><th>Highest Elevation (m)</th>' +
-      '</tr></thead><tbody>';
+  var sortState = { key: 'name', dir: 'asc' };
 
-    rows.forEach(function (r) {
+  function compareRows(a, b, key) {
+    var va = a[key], vb = b[key];
+    if (typeof va === 'string') return va.localeCompare(vb);
+    if (va === null) va = -Infinity;
+    if (vb === null) vb = -Infinity;
+    return va - vb;
+  }
+
+  function renderRows(rows) {
+    var sorted = rows.slice().sort(function (a, b) {
+      var cmp = compareRows(a, b, sortState.key);
+      return sortState.dir === 'asc' ? cmp : -cmp;
+    });
+
+    var tbody = document.querySelector('.tours-table tbody');
+    var html = '';
+    sorted.forEach(function (r) {
       var href = '/tour/?gpx=' + encodeURIComponent(r.path);
       html += '<tr>' +
         '<td><a href="' + href + '">' + r.name + '</a></td>' +
@@ -139,9 +167,41 @@ author_profile: true
         '<td>' + (r.elevMax !== null ? r.elevMax : '—') + '</td>' +
         '</tr>';
     });
+    tbody.innerHTML = html;
 
-    html += '</tbody></table>';
+    document.querySelectorAll('.tours-table th').forEach(function (th) {
+      var arrow = th.querySelector('.sort-arrow');
+      if (!arrow) return;
+      if (th.dataset.key === sortState.key) {
+        arrow.textContent = sortState.dir === 'asc' ? '▲' : '▼';
+      } else {
+        arrow.textContent = '';
+      }
+    });
+  }
+
+  function buildTable(rows) {
+    var html = '<table class="tours-table"><thead><tr>';
+    COLUMNS.forEach(function (col) {
+      html += '<th data-key="' + col.key + '">' + col.label + ' <span class="sort-arrow"></span></th>';
+    });
+    html += '</tr></thead><tbody></tbody></table>';
     document.getElementById('tours-table-container').innerHTML = html;
+
+    document.querySelectorAll('.tours-table th').forEach(function (th) {
+      th.addEventListener('click', function () {
+        var key = th.dataset.key;
+        if (sortState.key === key) {
+          sortState.dir = sortState.dir === 'asc' ? 'desc' : 'asc';
+        } else {
+          sortState.key = key;
+          sortState.dir = 'asc';
+        }
+        renderRows(rows);
+      });
+    });
+
+    renderRows(rows);
   }
 
   Promise.all(GPX_FILES.map(function (f) {
