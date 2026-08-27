@@ -61,24 +61,35 @@ def sanitize(path: Path, tour_type: str, meta_name: str) -> str:
         plain_name = " ".join(word.capitalize() for word in words)
         name_el.text = plain_name
 
+    def copy_points(new_seg, points):
+        for pt in points:
+            new_pt = ET.SubElement(
+                new_seg,
+                "trkpt",
+                {
+                    "lat": pt.get("lat", ""),
+                    "lon": pt.get("lon", ""),
+                },
+            )
+            ele = pt.findtext(f"{{{GPX_NS}}}ele")
+            if ele is not None:
+                ele_el = ET.SubElement(new_pt, "ele")
+                ele_el.text = ele
+
     # Process tracks — strip <time>, <extensions>, waypoints; add type attr
-    for trk in root.findall(f"{{{GPX_NS}}}trk"):
+    trks = root.findall(f"{{{GPX_NS}}}trk")
+    for trk in trks:
         new_trk = ET.SubElement(gpx, "trk", {"type": tour_type})
         for trkseg in trk.findall(f"{{{GPX_NS}}}trkseg"):
             new_seg = ET.SubElement(new_trk, "trkseg")
-            for trkpt in trkseg.findall(f"{{{GPX_NS}}}trkpt"):
-                new_pt = ET.SubElement(
-                    new_seg,
-                    "trkpt",
-                    {
-                        "lat": trkpt.get("lat", ""),
-                        "lon": trkpt.get("lon", ""),
-                    },
-                )
-                ele = trkpt.findtext(f"{{{GPX_NS}}}ele")
-                if ele is not None:
-                    ele_el = ET.SubElement(new_pt, "ele")
-                    ele_el.text = ele
+            copy_points(new_seg, trkseg.findall(f"{{{GPX_NS}}}trkpt"))
+
+    # Fall back to <rte><rtept> (e.g. AllTrails exports) when no track present
+    if not trks:
+        for rte in root.findall(f"{{{GPX_NS}}}rte"):
+            new_trk = ET.SubElement(gpx, "trk", {"type": tour_type})
+            new_seg = ET.SubElement(new_trk, "trkseg")
+            copy_points(new_seg, rte.findall(f"{{{GPX_NS}}}rtept"))
 
     # Pretty-print via re-serialization
     ET.indent(gpx, space="\t")
